@@ -4,11 +4,11 @@ close all;
 ur5 = ur5_interface();
 tf_frame.get_tf_tree();
 
-q = [0,-pi/2,pi/3,-pi/2,0,0]';
+q = [0,-pi/4,pi/4,0,0,1]';
 g = ur5FwdKin(q);
 fwdkinframe = tf_frame('base_link','FwdKin',eye(4));
 fwdkinframe.move_frame('base_link',g);
 pause(4);
-ur5.move_joints(q,10);
+ur5.move_joints(q,);
 pause(4);
 
