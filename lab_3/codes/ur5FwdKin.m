@@ -1,7 +1,8 @@
 %Takes in 6x1 joint space vector. Outputs the forward kinematics map g_st
 function g_st = ur5FwdKin(q)
-    %Taking g_st(0) from RViz and using product of exponentials calculation from Mathematica 
-    g_st_0 = [1 0 0 0.001;0 0 1 0.191;0 -1 0 1;0 0 0 1];
+    % Taking g_st(0) from RViz and using product of exponentials calculation from Mathematica 
+    % Check link lengths (from RViz)
+    g_st_0 = [1 0 0 0.817;0 0 1 0.191;0 1 0 0;0 0 0 1];
     c_hat_1 = [0    -1     0     0;
      1     0     0     0;
      0     0     0     0;

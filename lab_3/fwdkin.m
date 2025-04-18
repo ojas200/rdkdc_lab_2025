@@ -4,7 +4,7 @@ close all;
 function c = calc(w,v)
     c = [v,w]';
 end
-
+c
 function c_hat = get(c)
     w_hat = SKEW3(c(4:6,:));
     v = c(1:3,:);
