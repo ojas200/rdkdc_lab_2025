@@ -32,7 +32,8 @@ function finalerr = ur5RRcontrol(gdesired,K,ur5)
 
         %now check for singularity 
         J = ur5BodyJacobian(qk);
-        if cond(J) > 1000
+        singular = checkSingularity(J);
+        if singular == 1
             finalerr = -1;
             return; %return -1 if singular
         end
