@@ -1,7 +1,6 @@
-function xihat = RevoluteTwistSkew(q, w)
+function xihat = RevoluteTwistSkew(v, w)
 
-    %xi = [cross(-w, q); w];
-
-    xihat = [SKEW3(w) cross(-w, q); 0 0 0 0];
+    %Add comment
+    xihat = [SKEW3(w) v; 0 0 0 0];
 
 end
